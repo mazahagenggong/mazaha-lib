@@ -1,0 +1,8 @@
+# Exclude development files
+src/
+tsconfig.json
+tslint.json
+
+# Exclude files related to version control
+.git/
+.gitignore
