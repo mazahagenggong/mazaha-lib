@@ -1,0 +1,1 @@
+{"version":3,"file":"KirimPesan.d.ts","sourceRoot":"","sources":["../src/KirimPesan.ts"],"names":[],"mappings":"AAGA,KAAK,cAAc,GAAG;IAClB,SAAS,EAAE,MAAM,CAAC;IAClB,EAAE,EAAE,MAAM,CAAC;IACX,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,KAAK,EAAE,MAAM,CAAC;CACjB,CAAA;AACD,QAAA,MAAM,UAAU,SAAyB,cAAc;;;;;;;;;;;;;EAkCtD,CAAA;AAED,eAAe,UAAU,CAAC"}
