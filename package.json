@@ -4,7 +4,8 @@
   "description": "MA ZAHA 1 Library",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,12 @@
   },
   "homepage": "https://github.com/mazahagenggong/mazaha-lib#readme",
   "devDependencies": {
+    "@types/moment": "^2.13.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "moment": "^2.29.4",
+    "telegraf": "^4.15.3"
   }
 }
