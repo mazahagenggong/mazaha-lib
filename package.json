@@ -5,8 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "copy-index": "cp src/index.ts dist/index.ts",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "cp dist/* .publish-temp && npm run clean-temp",
+    "clean-temp": "rm -rf .publish-temp",
     "prepublishOnly": "npm run build"
   },
   "repository": {
