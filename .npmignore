@@ -6,3 +6,6 @@ tslint.json
 # Exclude files related to version control
 .git/
 .gitignore
+
+# Include only the dist directory
+!dist/
