@@ -1,5 +1,6 @@
 import axios from 'axios'
 import moment from "moment";
+import { Telegraf, Context } from 'telegraf';
 
 type KirimPesanType = {
     bot_token: string,
@@ -26,7 +27,12 @@ const KirimPesan = async function (data: KirimPesanType) {
     };
 
     try {
-        await axios.post(apiUrl, params);
+        const bot = new Telegraf(bot_token);
+        bot.command('sendmessage', (ctx: Context) => {
+            const chatId = id;
+            ctx.telegram.sendMessage(chatId, newPesan);
+            ctx.reply('Pesan telah dikirim!');
+        });
         return {
             success: true,
             data: {

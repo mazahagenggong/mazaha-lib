@@ -13,10 +13,12 @@ declare const KirimPesan: (data: KirimPesanType) => Promise<{
         pengirim: string | undefined;
         waktu: string;
     };
+    message?: undefined;
     error?: undefined;
 } | {
     success: boolean;
-    error: string;
+    message: string;
+    error: unknown;
     data?: undefined;
 }>;
 export default KirimPesan;
