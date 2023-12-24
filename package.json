@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mazahagenggong/mazaha-lib/issues"
   },
-  "homepage": "https://github.com/mazahagenggong/mazaha-lib#readme"
+  "homepage": "https://github.com/mazahagenggong/mazaha-lib#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
