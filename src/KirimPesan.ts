@@ -1,4 +1,3 @@
-import axios from 'axios'
 import moment from "moment";
 import { Telegraf, Context } from 'telegraf';
 
@@ -28,11 +27,7 @@ const KirimPesan = async function (data: KirimPesanType) {
 
     try {
         const bot = new Telegraf(bot_token);
-        bot.command('sendmessage', (ctx: Context) => {
-            const chatId = id;
-            ctx.telegram.sendMessage(chatId, newPesan);
-            ctx.reply('Pesan telah dikirim!');
-        });
+        await bot.telegram.sendMessage(id, newPesan);
         return {
             success: true,
             data: {
@@ -42,11 +37,11 @@ const KirimPesan = async function (data: KirimPesanType) {
                 waktu,
             }
         }
-    } catch (error) {
+    } catch (error:any) {
         return {
             success: false,
             message: "Internal server error, koneksi ke telegram gagal",
-            error
+            error:error
         }
     }
 }

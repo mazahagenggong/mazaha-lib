@@ -12,8 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __importDefault(require("axios"));
 const moment_1 = __importDefault(require("moment"));
+const telegraf_1 = require("telegraf");
 const KirimPesan = function (data) {
     return __awaiter(this, void 0, void 0, function* () {
         const { bot_token, id, pesan, pengirim, waktu } = data;
@@ -33,7 +33,12 @@ const KirimPesan = function (data) {
             pesan,
         };
         try {
-            yield axios_1.default.post(apiUrl, params);
+            const bot = new telegraf_1.Telegraf(bot_token);
+            bot.command('sendmessage', (ctx) => {
+                const chatId = id;
+                ctx.telegram.sendMessage(chatId, newPesan);
+                ctx.reply('Pesan telah dikirim!');
+            });
             return {
                 success: true,
                 data: {
