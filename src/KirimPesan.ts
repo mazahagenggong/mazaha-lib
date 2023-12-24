@@ -39,7 +39,8 @@ const KirimPesan = async function (data: KirimPesanType) {
     } catch (error) {
         return {
             success: false,
-            error: "Internal server error, koneksi ke telegram gagal"
+            message: "Internal server error, koneksi ke telegram gagal",
+            error
         }
     }
 }
