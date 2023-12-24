@@ -1,0 +1,24 @@
+{
+  "name": "mazaha-lib",
+  "version": "1.0.0",
+  "description": "MA ZAHA 1 Library",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazahagenggong/mazaha-lib.git"
+  },
+  "keywords": [
+    "MA",
+    "ZAHA",
+    "Library"
+  ],
+  "author": "abunaum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mazahagenggong/mazaha-lib/issues"
+  },
+  "homepage": "https://github.com/mazahagenggong/mazaha-lib#readme"
+}
