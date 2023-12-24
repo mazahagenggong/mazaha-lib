@@ -1,14 +1,13 @@
 {
   "name": "mazaha-lib",
-  "version": "1.0.8",
+  "version": "1.0.6",
   "description": "MA ZAHA 1 Library",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc",
-    "clean": "rm -rf dist",
-    "prebuildpackage": "npm run clean && npm run compile && node dist/SetupPackage.js",
-    "buildpackage": "cd dist && npm pack"
+    "build": "tsc",
+    "copy-index": "cp src/index.ts dist/index.ts",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
